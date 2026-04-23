@@ -1,0 +1,634 @@
+/* --- Header Estilos --- */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    background-color: rgba(255, 255, 255, 0.95); /* Fondo blanco con ligera transparencia */
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05); /* Sombra suave para dar profundidad */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* --- Contenedor del Logo --- */
+.logo img {
+    height: 50px; /* Ajusta según el tamaño de tu imagen */
+    width: auto;
+    display: block;
+}
+
+/* --- Navegación --- */
+.nav {
+    display: flex;
+    gap: 2.5rem;
+}
+
+.nav a {
+    text-decoration: none;
+    color: var(--texto-secundario);
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.nav a:hover {
+    color: var(--verde-sena);
+}
+
+/* Indicador de página activa */
+.nav a.active {
+    color: var(--verde-sena);
+}
+
+
+/* --- Botón Acceder --- */
+.boton-primero {
+    text-decoration: none;
+    background-color: var(--verde-sena);
+    color: var(--blanco);
+    padding: 0.6rem 2rem;
+    border-radius: 50px; /* Estilo redondeado como tus inputs */
+    font-weight: 700;
+    font-size: 0.9rem;
+    transition: transform 0.2s ease, background-color 0.3s ease;
+    display: inline-block;
+    box-shadow: 0 4px 6px rgba(73, 169, 25, 0.2);
+}
+
+.boton-primero:hover {
+    background-color: #3d8a14; /* Un verde un poco más oscuro al pasar el mouse */
+    transform: translateY(-2px); /* Pequeña elevación */
+    box-shadow: 0 6px 12px rgba(73, 169, 25, 0.3);
+}
+
+/* inicio */
+
+.seccion-inicio{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh; /* Ocupa casi toda la pantalla inicial */
+    padding: 100px 5%;
+    background-color: #ffffff;
+}
+
+.inicio-contenedor{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    max-width: 1200px;
+}
+
+.inicio-texto{
+    flex: 1;
+}
+
+.titulo-principal {
+    font-size: 5.5rem; /* Tamaño grande e impactante */
+    font-weight: 900;
+    color: #1d1c1c; /* Verde SENA */
+    margin-bottom: 20px;
+    line-height: 1;
+}
+
+.descripcion-inicio {
+    font-size: 1.1rem;
+    color: #4b5563;
+    line-height: 1.7;
+    margin-bottom: 35px;
+    text-align: justify;
+}
+
+.inicio-botones{
+    display: flex;
+    gap: 15px;
+}
+
+.btn-hero-primary, .btn-hero-secondary {
+    padding: 15px 30px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.btn-hero-primary {
+    background-color: #39A900;
+    color: white;
+}
+
+.btn-hero-secondary {
+    border: 2px solid #39A900;
+    color: #39A900;
+}
+
+.btn-hero-primary:hover {
+    background-color: #2d8500;
+    transform: translateY(-3px);
+}
+
+.btn-hero-secondary:hover {
+    background-color: #f0fdf4;
+    transform: translateY(-3px);
+}
+
+.imagen-inicio{
+    flex: 1;
+}
+
+.imagen-inicio img {
+    width: 100%;
+    height: auto;
+    max-width: 650px;
+    border-radius: 30px; /* Bordes redondeados modernos */
+    box-shadow: 20px 20px 60px #d9d9d9, -20px -20px 60px #ffffff; /* Efecto suave */
+}
+
+/* nosotros */
+
+/* --- CONFIGURACIÓN GENERAL SECCIÓN --- */
+.seccion-nosotros {
+    padding: 80px 10%;
+    background-color: #ffffff;
+    font-family: 'Poppins', sans-serif; /* Asegúrate de tener una fuente moderna */
+    overflow: hidden;
+}
+
+/* --- BLOQUE SUPERIOR (INFO + STATS) --- */
+.nosotros-info {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    margin-bottom: 100px;
+}
+
+.texto-nosotros {
+    flex: 1.5;
+}
+
+.texto-nosotros .principal-nosotros {
+    color: #39A900;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.9rem;
+    display: block;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.texto-nosotros h2 {
+    font-size: 2.8rem;
+    color: #111827;
+    line-height: 1.1;
+    margin-bottom: 25px;
+}
+
+.texto-nosotros p {
+    color: #4b5563;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    font-size: 1.05rem;
+}
+
+/* --- ESTADÍSTICAS (HIGHLIGHT) --- */
+.stats-nosotros {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+.stat-item.highlight {
+    background: #e1e2e3;
+    padding: 35px;
+    border-radius: 20px;
+    text-align: center;
+    border: 1px solid #e6e6e7;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05); /* Sombra suave */
+    transition: transform 0.3s ease;
+}
+
+.stat-item.highlight:hover {
+    transform: translateY(-5px);
+}
+
+.stat-item h3 {
+    font-size: 2.5rem;
+    color: #39A900;
+    margin-bottom: 5px;
+}
+
+.stat-item p {
+    color: #6b7280;
+    font-weight: 500;
+}
+
+/* --- PROCESO DE INICIO (GRID 3 ARRIBA / 2 ABAJO) --- */
+.cabecera-proceso {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.cabecera-proceso .subtitulo {
+    color: #39A900;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+.pasos-container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.pasos {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); /* 6 columnas para dividir en 3 y 2 */
+    gap: 30px;
+}
+
+.paso-card {
+    grid-column: span 2; /* Los 3 primeros ocupan 2 columnas cada uno = 6 */
+    background: #f2f5f5;
+    padding: 40px 25px;
+    border-radius: 25px;
+    text-align: center;
+    border: 1px solid #f1f5f9;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* Centrado de los últimos dos elementos */
+.paso-card:nth-child(4) {
+    grid-column: 2 / span 2; /* Salta la primera columna */
+}
+
+.paso-card:nth-child(5) {
+    grid-column: 4 / span 2;
+}
+
+.paso-card:hover {
+    background: #ffffff;
+    border-color: #39A900;
+    transform: translateY(-15px);
+    box-shadow: 0 20px 40px rgba(57, 169, 0, 0.1);
+}
+
+.circulo-icono {
+    width: 75px;
+    height: 75px;
+    background: #f0fdf4;
+    color: #39A900;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin: 0 auto 20px;
+    font-size: 1.8rem;
+    transition: 0.3s;
+}
+
+.paso-card:hover .circulo-icono {
+    background: #39A900;
+    color: white;
+    transform: scale(1.1) rotate(10deg);
+}
+
+.paso-card h4 {
+    color: #1f2937;
+    margin-bottom: 15px;
+    font-size: 1.25rem;
+}
+
+.paso-card p {
+    color: #6b7280;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* servicios */
+
+/* --- SECCIÓN SERVICIOS --- */
+.seccion-servicios {
+    padding: 100px 10%;
+    background-color: #f8fafc; /* Un gris muy tenue para diferenciar de 'Nosotros' */
+}
+
+.cabecera-servicios {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.cabecera-servicios .principal-servicios {
+    color: #39A900;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.cabecera-servicios h2 {
+    font-size: 2.8rem;
+    margin: 15px 0;
+    color: #111827;
+}
+
+/* --- CONTENEDOR DE TARJETAS --- */
+.servicios-contenedor {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    align-items: center;
+}
+
+.servicio-card {
+    background: #ffffff;
+    padding: 50px 35px;
+    border-radius: 30px;
+    border: 1px solid #e5e7eb;
+    transition: all 0.3s ease;
+    position: relative;
+    text-align: center;
+}
+
+/* Tarjeta destacada (Instructores) */
+.servicio-card.destacado {
+    border: 2px solid #39A900;
+    transform: scale(1.05);
+    box-shadow: 0 20px 40px rgba(57, 169, 0, 0.1);
+}
+
+.servicio-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.05);
+}
+
+.servicio-icono {
+    font-size: 3.5rem;
+    color: #39A900;
+    margin-bottom: 25px;
+}
+
+.servicio-card h3 {
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+    color: #1f2937;
+}
+
+.servicio-card ul {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+}
+
+.servicio-card ul li {
+    margin-bottom: 15px;
+    color: #4b5563;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.servicio-card ul li i {
+    color: #39A900;
+    font-weight: bold;
+}
+
+/* Badge para la tarjeta destacada */
+.badge-destacado {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #39A900;
+    color: white;
+    padding: 5px 20px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+
+/* contactos */
+.seccion-contacto {
+    padding: 120px 10%;
+    background-color: #ffffff;
+    position: relative;
+    overflow: hidden;
+}
+
+.contenedor-contacto {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 100px;
+}
+
+/* LADO IZQUIERDO */
+.info-principal {
+    flex: 1;
+}
+
+.titulo-verde {
+    color: #39A900;
+    font-weight: 800;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.info-principal h2 {
+    font-size: 3.5rem;
+    color: #0f172a;
+    margin: 20px 0;
+    line-height: 1;
+}
+
+/* Color sólido y profesional sin prefijos -webkit */
+.texto-resaltado {
+    color: #2d8500; /* Un verde un poco más oscuro y serio */
+    font-weight: 800;
+    display: inline;
+}
+
+/* Ajuste para el título principal */
+.info-principal h2 {
+    font-size: 3.5rem;
+    color: #0f172a; /* Azul muy oscuro para el texto normal */
+    margin: 20px 0;
+    line-height: 1.1;
+}
+
+.lineas-contacto {
+    margin-top: 50px;
+}
+
+.item-contacto {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #f1f5f9; /* Solo una línea abajo, no una caja */
+}
+
+.item-contacto i {
+    font-size: 2rem;
+    color: #39A900;
+}
+
+.detalles span {
+    display: block;
+    font-size: 0.8rem;
+    color: #94a3b8;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.detalles p {
+    font-size: 1.1rem;
+    color: #334155;
+    font-weight: 500;
+}
+
+/* LADO DERECHO (REDES) */
+.social-side {
+    flex: 1;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+/* Un detalle visual circular de fondo para que no se vea vacío */
+.circulo-decorativo {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(57, 169, 0, 0.05) 0%, rgba(255,255,255,0) 70%);
+    z-index: 1;
+}
+
+.redes {
+    position: relative;
+    z-index: 2;
+    text-align: left;
+}
+
+.redes p {
+    font-weight: 700;
+    margin-bottom: 30px;
+    color: #1e293b;
+    font-size: 1.2rem;
+}
+
+.enlaces {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.enlaces a {
+    text-decoration: none;
+    color: #475569;
+    font-size: 1.1rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    transition: 0.3s;
+}
+
+.enlaces a i {
+    font-size: 1.5rem;
+    transition: 0.3s;
+}
+
+.enlaces a:hover {
+    color: #39A900;
+    transform: translateX(10px); /* Efecto de desplazamiento */
+}
+
+.enlaces a:hover i {
+    transform: scale(1.2);
+}
+
+/* footer */
+
+.footer {
+    background-color: #008000; /* Puedes cambiar a #111827 si quieres el fondo oscuro profesional */
+    color: #ffffff;
+    padding: 60px 10% 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.footer-logoSena {
+    height: 60px;
+    margin-bottom: 20px;
+    filter: brightness(0) invert(1); /* Vuelve el logo blanco */
+}
+
+.footer-parrafo {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    opacity: 0.9;
+}
+
+.footer-col h4 {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    position: relative;
+    font-weight: 700;
+}
+
+.footer-col h4::after {
+    content: '';
+    display: block;
+    width: 30px;
+    height: 2px;
+    background: #ffffff;
+    margin-top: 8px;
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-col ul li {
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+/* --- BARRA INFERIOR --- */
+.footer-copyright {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 25px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    font-size: 0.85rem;
+}
+
+.copyright-location {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.flag-icon {
+    width: 25px;
+    border-radius: 2px;
+}
+
+

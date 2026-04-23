@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StockMind - Registro Instructor</title>
+    <link rel="stylesheet" href="Estilos/Global.css">
+    <link rel="stylesheet" href="Estilos/Login.css">
+    <link rel="stylesheet" href="Estilos/RegistroIntructor.css">
+</head>
+<body>
+
+    <div class="pantalla-dividida">
+        <div class="tarjeta-contenedor">
+            
+            <div class="panel-izquierdo">
+                <div class="contenido-izquierdo">
+                    <div class="avatar-instructor">
+                        <img src="Img/InstructorLogo.png" alt="Instructor" class="avatar-img">
+                    </div>
+                    <h2>¡Bienvenido Instructor!</h2>
+                    <nav class="menu-lateral">
+                        <ul>
+                            <li>
+                                <a href="Login.html">
+                                    <i class="bi bi-box-arrow-in-right"></i>
+                                    <span>Iniciar Sesión</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="RegistroPaso01.html">
+                                    <i class="bi bi-arrow-left-circle"></i>
+                                    <span>Cambiar Rol</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="Ayuda.html">
+                                    <i class="bi bi-question-circle"></i>
+                                    <span>Ayuda</span>
+                                </a>
+                            </li>
+                        </ul>
+                        
+                        <div class="irInicio"></div>
+                        
+                        <a href="Inicio.html" class="link-irInicio">
+                        <i class="bi bi-house-door "></i>
+                        <span>Ir al Inicio</span>
+                        </a>
+                    </nav>
+                </div>
+            </div>
+
+            <div class="panel-formulario">
+
+                <div class="registro-header">
+                    <img src="Img/Capa 1.svg" alt="StockMind" class="logo-stockmind">
+                    <h1>Crear Cuenta</h1>
+                </div>
+
+                <form action="#">
+                    <div class="fila-input">
+                        <div class="grupo-input">
+                            <i class="bi bi-person"></i>
+                            <input type="text" placeholder="Primer Nombre" required>
+                        </div>
+                        <div class="grupo-input">
+                            <i class="bi bi-person"></i>
+                            <input type="text" placeholder="Segundo Nombre">
+                        </div>
+                    </div>
+
+                    <div class="fila-input">
+                        <div class="grupo-input">
+                            <i class="bi bi-person-badge"></i>
+                            <input type="text" placeholder="Primer Apellido" required>
+                        </div>
+                        <div class="grupo-input">
+                            <i class="bi bi-person-badge"></i>
+                            <input type="text" placeholder="Segundo Apellido">
+                        </div>
+                    </div>
+
+                    <div class="fila-input">
+                        <div class="grupo-input" style="flex: 0.4;">
+                            <select class="select-input" required>
+                                <option value="C.C.">C.C.</option>
+                                <option value="C.E.">C.E.</option>
+                            </select>
+                        </div>
+                        <div class="grupo-input" style="flex: 1;">
+                            <i class="bi bi-card-heading"></i>
+                            <input type="text" placeholder="Número de Identificación" required>
+                        </div>
+                    </div>
+                    
+                    <div class="fila-input">
+                        <div class="grupo-input">
+                            <i class="bi bi-telephone"></i>
+                            <input type="tel" placeholder="Teléfono" required>
+                        </div>
+                        
+                        <div class="grupo-input">
+                            <i class="bi bi-geo-alt"></i> 
+                            <select class="select-input" required>
+                                <option value="" disabled selected>Seleccione Centro</option>
+                                <option value="agropecuario">Centro Agropecuario - Regional Cauca</option>
+                                <option value="ctpi">CTPI - Teleinformática y Producción Industrial</option>
+                                <option value="comercio">Centro de Comercio y Servicios</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="grupo-input">
+                        <i class="bi bi-envelope"></i>
+                        <input type="email" placeholder="Correo" required>
+                    </div>
+
+                    <div class="grupo-input">
+                        <i class="bi bi-lock"></i>
+                        <input type="password" placeholder="Contraseña" required>
+                    </div>
+
+                    <button type="submit" class="btn-registrar">REGISTRARSE</button>
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>

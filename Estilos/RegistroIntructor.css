@@ -1,0 +1,280 @@
+.pantalla-dividida {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.tarjeta-contenedor {
+    display: flex;
+    background: var(--blanco);
+    width: 100%;
+    max-width: 1050px;
+    min-height: 700px;
+    border-radius: 24px;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05), 0 10px 10px -5px rgba(0, 0, 0, 0.02);
+    overflow: hidden;
+}
+
+/* Panel Lateral */
+.panel-izquierdo {
+    flex: 1;
+    position: relative;
+    background: linear-gradient(135deg, var(--verde-sena), #3d8d15);
+    color: var(--blanco);
+    padding: 60px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+.panel-izquierdo::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: linear-gradient(135deg, rgba(73, 169, 25, 0.9), rgba(0, 50, 77, 0.8));
+    z-index: 1;
+}
+
+.contenido-izquierdo {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.contenido-izquierdo h2 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+/* Contenedor circular con color refinado (Verdeazulado muy oscuro) */
+.avatar-instructor {
+    width: 200px; /* Tamaño del círculo */
+    height: 200px;
+    /* Este color es un azul oscuro con tinte verde que combina con el fondo */
+    background-color: #8afb88; 
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px; /* Espacio antes del título */
+    /* Un borde suave de color beige muy claro para un contraste elegante */
+    border: 5px solid #fffdf0; 
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25); /* Sombra para profundidad */
+    overflow: hidden; /* IMPORTANTE: Mantiene la imagen dentro del círculo */
+    position: relative;
+}
+
+/* OPCIÓN A: Estilos si usas una Imagen (PNG) */
+.avatar-img {
+    width: 100%; /* La imagen llenará el ancho del círculo */
+    height: 100%;
+    object-fit: cover; /* Evita que la imagen se estire o deforma; se recortará sutilmente */
+    object-position: center top; /* Asegura que la cara del aprendiz (arriba) no se corte */
+    transition: transform 0.3s ease;
+}
+
+/* Efecto al pasar el mouse por encima (Opcional) */
+.avatar-instructor:hover .avatar-img {
+    transform: scale(1.08); /* Pequeño zoom suave */
+}
+
+
+
+/* Navegación Lateral */
+.menu-lateral {
+    width: 100%;
+    max-width: 280px;
+    margin-top: 20px;
+}
+
+.menu-lateral ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-lateral li {
+    margin-bottom: 10px;
+}
+
+.menu-lateral a {
+    display: flex;
+    align-items: center;
+    padding: 12px 20px;
+    color: rgba(255, 255, 255, 0.9);
+    text-decoration: none;
+    font-size: 1.05rem;
+    font-weight: 500;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.05); /* Fondo sutil */
+}
+
+.menu-lateral a i {
+    font-size: 1.3rem;
+    margin-right: 15px;
+    transition: transform 0.3s ease;
+}
+
+/* Efecto al pasar el mouse */
+.menu-lateral a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+    transform: translateX(5px); /* Desplazamiento lateral suave */
+}
+
+.menu-lateral a:hover i {
+    transform: scale(1.1);
+}
+
+/* Línea divisoria opcional entre el texto y el menú */
+.menu-lateral::before {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 2px;
+    background: rgba(255, 255, 255, 0.3);
+    margin: 0 auto 25px auto;
+}
+
+.irInicio {
+    height: 1px;
+    background: rgba(255, 255, 255, 0.2);
+    margin: 1.5rem 0;
+    width: 80%;
+}
+
+.link-irInicio{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.85); /* Un blanco sutil */
+    font-weight: 600;
+    font-size: 0.9rem;
+    padding: 10px 0;
+    transition: all 0.3s ease;
+}
+
+.link-irInicio i {
+    font-size: 1.2rem;
+}
+
+.link-irInicio:hover {
+    color: #ffffff;
+    transform: translateX(5px); /* Efecto de empuje hacia la derecha */
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+
+/* Panel Formulario */
+.panel-formulario {
+    flex: 1.4;
+    padding: 50px 60px;
+    background-color: var(--blanco);
+}
+
+.registro-header {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.logo-stockmind {
+    height: 50px;
+    margin-bottom: 15px;
+}
+
+.registro-header h1 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--texto-principal);
+    margin: 0;
+}
+
+/* Inputs y Filas */
+.fila-input {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 18px; /* Margen constante en filas */
+}
+
+.grupo-input {
+    flex: 1;
+    margin-bottom: 18px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    background-color: #F3F4F6;
+    border: 1px solid #E5E7EB;
+    border-radius: 12px;
+    padding: 0 15px;
+    transition: all 0.2s ease;
+    min-width: 0; /* Permite que el contenedor se encoja para elipsis */
+}
+
+.grupo-input:focus-within {
+    background-color: var(--blanco);
+    border-color: var(--verde-sena);
+    box-shadow: 0 0 0 4px rgba(73, 169, 25, 0.1);
+}
+
+.grupo-input i {
+    color: var(--texto-secundario);
+    font-size: 1.1rem;
+    margin-right: 12px;
+    flex-shrink: 0; /* Evita que el icono se aplaste */
+}
+
+.grupo-input input, 
+.select-input {
+    width: 100%;
+    padding: 14px 0;
+    border: none;
+    background: transparent;
+    outline: none;
+    font-family: var(--fuente);
+    color: var(--texto-principal);
+    font-size: 0.95rem;
+}
+
+/* Estilos específicos para el Select */
+.select-input {
+    cursor: pointer;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    padding-right: 10px;
+}
+
+/* Botón Registrarse */
+.btn-registrar {
+    width: 100%;
+    padding: 16px;
+    background-color: var(--verde-sena);
+    color: var(--blanco);
+    border: none;
+    border-radius: 12px;
+    font-family: var(--fuente);
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+}
+
+.btn-registrar:hover {
+    background-color: #3a8614;
+    box-shadow: 0 10px 15px -3px rgba(73, 169, 25, 0.3);
+    transform: translateY(-1px);
+}

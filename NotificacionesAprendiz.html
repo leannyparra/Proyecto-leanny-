@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notificaiones- StockMind</title>
+    <link rel="stylesheet" href="Estilos/NotificacionesAprendiz.css">
+    <link rel="stylesheet" href="Estilos/NavegacionAprendiz.css">
+    <link rel="stylesheet" href="Estilos/Global.css">
+</head>
+<body>
+    <nav class="menu-lateral">
+        <div class="menu-logo">
+            <img src="Img/Capa 1.svg" alt="StockMind Logo" class="logo-img">
+        </div>
+    
+        <ul class="menu-lista">
+            <li class="active">
+                <a href="AprendizPerfil.html">
+                    <i class="bi bi-person-gear"></i> 
+                    <span>Perfil</span>
+                </a>
+            </li>
+            <li>
+                <a href="NotificacionesAprendiz.html">
+                    <i class="bi bi-bell"></i> 
+                    <span>Notificaciones</span>
+                </a>
+            </li>
+            <li>
+                <a href="reportar-daño.html">
+                    <i class="bi bi-exclamation-triangle"></i> 
+                    <span>Reportar Daño</span>
+                </a>
+            </li>
+            <li>
+                <a href="mis-elementos.html">
+                    <i class="bi bi-person-check-fill"></i> 
+                    <span>Mis Elementos</span>
+                </a>
+            </li>
+        </ul>
+
+        <div class="menu-pie">
+            <a href="CerrarSesion" class="enlace-salir">
+                <i class="bi bi-box-arrow-left"></i> Cerrar Sesión
+            </a>
+            <div class="perfil-usuario">
+                <i class="bi bi-person-circle"></i>
+                <span>APRENDIZ SENA</span>
+            </div>
+        </div>
+    </nav>
+<main class="contenido-principal">
+    <div class="contenedor-notificaciones">
+        <header class="encabezado-seccion">
+            <h1>Centro de Notificaciones</h1>
+            <p>Gestiona y revisa los elementos asignados a tu nombre en el ambiente de formación.</p>
+        </header>
+
+        <div class="barra-busqueda-container">
+            <div class="input-busqueda-wrapper">
+                <i class="bi bi-search"></i>
+                <input type="text" placeholder="Buscar notificaciones (ej: Computador, Mouse, Instructor...)" id="inputBusqueda">
+            </div>
+            <button class="boton-filtro">
+                <i class="bi bi-sliders"></i>
+                <span>Filtros</span>
+            </button>
+        </div>
+        <section class="lista-notificaciones">
+            <div class="tarjeta-notificacion nueva">
+                <div class="icono-tipo">
+                    <i class="bi bi-laptop"></i>
+                </div>
+                <div class="info-notificacion">
+                    <div class="titulo-fila">
+                        <h3>Equipo Asignado: Computador #10</h3>
+                        <span class="etiqueta-nueva">Nuevo</span>
+                    </div>
+                    <p>El Instructor <strong>Carlos Pérez</strong> te ha asignado el equipo del ambiente 204. Por favor, verifica el estado del hardware al recibirlo.</p>
+                    <div class="metadatos">
+                        <span><i class="bi bi-calendar3"></i> 22 Abril 2026</span>
+                        <span><i class="bi bi-geo-alt"></i> Centro Comercio y Servicios</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tarjeta-notificacion">
+                <div class="icono-tipo">
+                    <i class="bi bi-mouse3"></i>
+                </div>
+                <div class="info-notificacion">
+                    <h3>Periférico Asignado: Mouse Óptico</h3>
+                    <p>Se ha registrado la entrega de un mouse Genius (Serie: GEN-9910) ambiente 204, para complementar tu estación de trabajo.</p>
+                    <div class="metadatos">
+                        <span><i class="bi bi-calendar3"></i> 21 Abril 2026</span>
+                        <span><i class="bi bi-geo-alt"></i> Centro Comercio y Servicios</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</main>
+</body>
+</html>

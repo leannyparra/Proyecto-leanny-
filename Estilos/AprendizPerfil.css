@@ -1,0 +1,436 @@
+.menu-lateral {
+    width: 270px;
+    min-width: 270px;
+    flex-shrink: 0;
+    height: 100vh;
+    background-color: var(--blanco);
+    border-right: 1px solid #eee;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0;
+    position: fixed;
+}
+
+.menu-logo {
+    padding: 0 25px 30px;
+    text-align: center;
+}
+
+.logo-img {
+    max-width: 150px;
+}
+
+.menu-lista {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex-grow: 1; /* Empuja el pie hacia abajo */
+}
+
+.menu-lista li {
+    margin: 10px 20px;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.menu-lista li a {
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    text-decoration: none;
+    color: var(--texto-gris);
+    font-weight: 500;
+}
+
+.menu-lista li i {
+    margin-right: 12px;
+    font-size: 1.2rem;
+}
+
+/* --- ESTILO ACTIVO (Como en la foto) --- */
+.menu-lista li.active {
+    background-color: var(--verde-claro);
+}
+
+.menu-lista li.active a {
+    color: var(--texto-oscuro);
+}
+
+/* El borde verde a la izquierda del ítem activo */
+.menu-lista li.active::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 25%;
+    height: 50%;
+    width: 4px;
+    background-color: #2b5d34; /* Verde oscuro de la imagen */
+    border-radius: 0 4px 4px 0;
+}
+
+/* Hover suave */
+.menu-lista li:hover:not(.active) {
+    background-color: #f0f2f5;
+}
+
+/* Estilo para el Cierre de Sesión */
+.menu-salir {
+    margin-top: 20px !important;
+    border-top: 1px solid #f0f0f0;
+    padding-top: 10px;
+}
+
+.menu-pie {
+    margin-top: auto; /* Empuja el pie al final del menú lateral */
+    padding: 20px;
+    border-top: 1px solid #f1f5f9;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.enlace-salir {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #ef4444; /* Rojo profesional */
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    padding: 10px 15px;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+.enlace-salir:hover {
+    background-color: #fef2f2; /* Fondo rojo muy suave al pasar el mouse */
+    transform: translateX(5px); /* Efecto de movimiento sutil */
+}
+
+.enlace-salir i {
+    font-size: 1.2rem;
+}
+
+.perfil-usuario {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px;
+    background-color: #f8fafc; /* Gris muy claro para resaltar del blanco */
+    border: 1px solid #e2e8f0;
+    border-radius: 15px;
+    transition: border-color 0.3s;
+}
+
+.perfil-usuario i {
+    font-size: 1.8rem;
+    color: var(--verde-sena, #39A900);
+}
+
+.perfil-usuario span {
+    font-size: 0.75rem;
+    font-weight: 800;
+    color: #1e293b;
+    letter-spacing: 0.5px;
+    text-transform: uppercase; /* Para que 'APRENDIZ SENA' se vea más serio */
+}
+
+/* --- Estilos del Contenedor Principal --- */
+.contenido-principal {
+    margin-left: 270px; /* Espacio para tu menú lateral */
+    padding: 40px;
+    background-color: #f8fafc; /* Gris muy claro de fondo */
+    min-height: 100vh;
+    font-family: var(--fuente);
+}
+
+.perfil-contenedor {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* --- Header del Perfil --- */
+.perfil-header {
+    background-color: var(--blanco);
+    padding: 30px;
+    border-radius: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    margin-bottom: 30px;
+}
+
+.perfil-info {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.avatar-aprendiz {
+    position: relative;
+    width: 110px;
+    height: 110px;
+}
+
+.avatar-img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--verde-sena);
+}
+
+.fotoAprendiz {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    background-color: var(--verde-sena);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s;
+}
+
+.fotoAprendiz:hover { transform: scale(1.1); }
+
+.texto-perfil h1 {
+    margin: 0;
+    font-size: 1.8rem;
+    color: var(--texto-principal);
+}
+
+.rol {
+    color: var(--verde-sena);
+    font-weight: 700;
+    font-size: 0.9rem;
+    background: #f0fdf4;
+    padding: 4px 12px;
+    border-radius: 20px;
+}
+
+.texto-perfil p {
+    margin: 8px 0 0;
+    color: var(--texto-secundario);
+}
+
+/* --- Botones --- */
+.boton-seguridad {
+    background-color: var(--verde-sena);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: background 0.3s;
+}
+.boton-editar  {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none; /* Quita el subrayado azul del link */
+    background-color: var(--verde-sena);
+    color: white;
+    padding: 12px 20px;
+    border-radius: 10px;
+    font-weight: 600;
+    width: fit-content; /* Para que no ocupe todo el ancho */
+}
+
+.boton-editar:hover, .boton-seguridad:hover {
+    background-color: #3d8e15;
+}
+
+.boton-seguridad {
+    width: 100%;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+/* --- Cuerpo del Perfil (Grid) --- */
+.perfil-subtitulo {
+    display: grid;
+    grid-template-columns: 1.6fr 1fr;
+    gap: 30px;
+}
+
+.perfil-cards {
+    background-color: var(--blanco);
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    margin-bottom: 25px;
+}
+
+.perfil-cards h3 {
+    margin-top: 0;
+    font-size: 1.1rem;
+    color: var(--texto-principal);
+    border-bottom: 1px solid #f1f5f9;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.perfil-cards h3 i { color: var(--verde-sena); }
+
+/* --- Los Datos (Grid Interno) --- */
+.losDatos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.dato { display: flex; flex-direction: column; gap: 6px; }
+
+.dato-ancho {
+    grid-column: span 2;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.dato label, .dato-ancho label {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--texto-secundario);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.dato-falso {
+    background-color: #f9fafb;
+    border: 1px solid #e5e7eb;
+    padding: 12px 15px;
+    border-radius: 10px;
+    color: var(--texto-principal);
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.dato-falso i { color: #9ca3af; }
+
+/* --- Sidebar del Perfil --- */
+.seguridad-texto {
+    font-size: 0.9rem;
+    color: var(--texto-secundario);
+    line-height: 1.5;
+}
+
+.opcion-oscuro {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.opcion-oscuro:last-child { border-bottom: none; }
+
+.opcion-oscuro i {
+    font-size: 1.6rem;
+    cursor: pointer;
+}
+
+.bi-toggle-on { color: var(--verde-sena); }
+.bi-toggle-off { color: #d1d5db; }
+
+
+
+
+
+
+
+
+
+/* El contenedor que desenfoca el fondo */
+.fondo-modal {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(6px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+}
+
+/* El cuadro blanco */
+.tarjeta-modal {
+    background: var(--blanco);
+    padding: 40px 30px;
+    border-radius: 25px;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+/* El círculo con el icono */
+.icono-superior-modal {
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--texto-principal);
+    width: 60px; height: 60px;
+    border-radius: 50%;
+    border: 5px solid var(--blanco);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.pie-modal {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.boton-modal {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    border-radius: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: var(--fuente);
+}
+
+/* Colores de botones usando tus variables */
+.boton-cancelar { background: #e9f5e1; color: var(--verde-sena); }
+.boton-confirmar { background: #e35d6a; color: white; }
+.boton-actualizar { background: var(--verde-sena); color: white; }
+
+/* Formulario */
+.formulario-modal { margin-top: 20px; display: flex; flex-direction: column; gap: 10px; }
+.grupo-entrada-modal { position: relative; display: flex; align-items: center; }
+.grupo-entrada-modal i { position: absolute; left: 15px; color: var(--verde-sena); }
+.grupo-entrada-modal input {
+    width: 100%;
+    padding: 12px 12px 12px 40px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+
+/* Clase para ocultar (la que controla el JS) */
+.oculto { display: none !important; }
