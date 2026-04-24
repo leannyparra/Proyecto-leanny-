@@ -42,6 +42,16 @@
     color: var(--verde-sena);
 }
 
+.nav a.active::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--verde-sena);
+    border-radius: 2px;
+}
 
 /* --- Botón Acceder --- */
 .boton-primero {

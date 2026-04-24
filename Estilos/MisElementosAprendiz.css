@@ -1,0 +1,259 @@
+
+/* --- Navagacion --- */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    background-color: #f5f6f8; 
+    font-family: 'Poppins', sans-serif;
+}
+aside{
+    width: 250px;
+    height: 100vh; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: white;
+    text-align: left;
+}
+
+.izquierda{
+    display: flex;
+    justify-content: center;
+}
+.nav ul{
+    list-style: none;
+}
+.nav li {
+    width: 85%;
+    padding: 10px;
+    margin: 20px;
+    border-radius: 8px;
+}
+
+.nav li:hover {
+    border-left: 5px solid rgb(1, 87, 24);
+    background-color: rgb(236, 255, 233);
+    cursor: pointer;
+}
+.nav a{
+    text-decoration: none;
+    color: black;
+}
+.nav i{
+    font-size: 18px;
+    padding: 0 10px;
+}
+.selected{
+    border-left: 5px solid rgb(1, 87, 24);
+    background-color: rgb(236, 255, 233);
+}
+
+
+/* --- Contenedor Principal --- */
+/* --- Ajustes de Espaciado General --- */
+.contenido-principal {
+    margin-left: 250px; /* Ancho de tu aside */
+    width: calc(100% - 250px);
+    padding: 30px 50px;
+    background-color: #f8fafc;
+    min-height: 100vh;
+}
+
+.subtitulo-tabla {
+    font-size: 1.1rem;
+    color: var(--texto-secundario);
+    margin: 40px 0 15px 5px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* --- Buscador Estilizado --- */
+/* barra de busqueda */
+.barra-busqueda-container {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+.input-busqueda-wrapper {
+    position: relative;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+}
+
+.input-busqueda-wrapper i {
+    position: absolute;
+    left: 20px;
+    color: var(--texto-secundario);
+    font-size: 1.1rem;
+}
+
+.input-busqueda-wrapper input {
+    width: 100%;
+    padding: 15px 15px 15px 55px;
+    border-radius: 15px;
+    border: 2px solid #edf2f7;
+    font-family: var(--fuente);
+    font-size: 0.95rem;
+    background-color: var(--blanco);
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+.input-busqueda-wrapper input:focus {
+    border-color: var(--verde-sena);
+    box-shadow: 0 0 0 4px rgba(73, 169, 25, 0.1);
+    background-color: #fff;
+}
+
+.boton-filtro {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 0 25px;
+    background-color: var(--blanco);
+    border: 2px solid #edf2f7;
+    border-radius: 15px;
+    color: var(--texto-principal);
+    font-family: var(--fuente);
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.boton-filtro:hover {
+    background-color: #f8f9fa;
+    border-color: #cbd5e1;
+}
+
+.boton-filtro i {
+    font-size: 1.1rem;
+    color: var(--verde-sena);
+}
+
+
+/* --- Diseño de Tablas --- */
+/* --- Tarjeta Contenedora --- */
+.tarjeta-tabla {
+    background: var(--blanco);
+    border-radius: 18px;
+    border: 1px solid #f1f5f9;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+    transition: all 0.3s ease;
+    overflow: hidden; /* Mantiene los bordes redondeados con la tabla adentro */
+}
+
+.tarjeta-tabla:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+    border-color: rgba(73, 169, 25, 0.2);
+}
+
+/* --- Diseño de la Tabla --- */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: var(--fuente);
+}
+
+/* Cabecera */
+thead tr {
+    background-color: #f8fafc;
+}
+
+th {
+    padding: 18px 20px;
+    text-align: left;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--texto-secundario);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-bottom: 2px solid #f1f5f9;
+}
+
+/* Celdas */
+td {
+    padding: 20px;
+    vertical-align: middle;
+    color: var(--texto-principal);
+    font-size: 0.95rem;
+    border-bottom: 1px solid #f8fafc;
+}
+
+/* Columna de Elemento (Título + Subtítulo) */
+.info-elemento {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.info-elemento strong {
+    font-size: 1rem;
+    color: #111827;
+}
+
+.info-elemento span {
+    font-size: 0.8rem;
+    color: var(--verde-sena);
+    font-weight: 600;
+    background: #f0fdf4;
+    padding: 2px 8px;
+    border-radius: 6px;
+    width: fit-content;
+}
+
+/* Estilo para Instructor y Lugar */
+td:nth-child(2), td:nth-child(3) {
+    color: #4b5563;
+    font-weight: 500;
+}
+
+/* Estilo para Fecha y Hora */
+td:nth-child(4), td:nth-child(5) {
+    font-family: monospace; /* Les da un aire técnico/preciso */
+    font-size: 0.9rem;
+    color: #6366f1; /* Un color azulado sutil para diferenciar datos de tiempo */
+    font-weight: 600;
+}
+
+/* --- Badge de Estado (Tag) --- */
+.tag-estado {
+    display: inline-flex;
+    align-items: center;
+    padding: 6px 14px;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    background-color: #ecfdf5;
+    color: #059669;
+    border: 1px solid #d1fae5;
+    position: relative;
+}
+
+/* El puntito de "en vivo" en el estado activo */
+.tag-estado::before {
+    content: "";
+    width: 6px;
+    height: 6px;
+    background-color: #10b981;
+    border-radius: 50%;
+    margin-right: 8px;
+    box-shadow: 0 0 8px #10b981;
+}
+
+/* --- Micro-interacción en Filas --- */
+tbody tr {
+    transition: background-color 0.2s ease;
+}
+
+tbody tr:hover {
+    background-color: #fcfdfe;
+}

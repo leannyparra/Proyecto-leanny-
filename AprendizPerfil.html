@@ -3,54 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Perfil de Usuario - StockMind</title>
-    <link rel="stylesheet" href="Estilos/AprendizPerfil.css"> 
+    <title>Perfil de Usuario - StockMind</title> 
     <link rel="stylesheet" href="Estilos/Global.css"> 
-    <link rel="stylesheet" href="Estilos/NavegacionAprendiz.css">
+    <link rel="stylesheet" href="Estilos/AprendizPerfil.css">
+</head>
 <body>
-
-    <nav class="menu-lateral">
-        <div class="menu-logo">
-        <img src="Img/Capa 1.svg" alt="StockMind Logo" class="logo-img">
-    </div>
-    
-    <ul class="menu-lista">
-        <li class="active">
-            <a href="AprendizPerfil.html">
-                <i class="bi bi-person-gear"></i> 
-                <span>Perfil</span>
-            </a>
-        </li>
-        <li>
-            <a href="NotificacionesAprendiz.html">
-                <i class="bi bi-bell"></i> 
-                <span>Notificaciones</span>
-            </a>
-        </li>
-        <li>
-            <a href="reportar-daño.html">
-                <i class="bi bi-exclamation-triangle"></i> 
-                <span>Reportar Daño</span>
-            </a>
-        </li>
-        <li>
-            <a href="mis-elementos.html">
-                <i class="bi bi-person-check-fill"></i> 
-                <span>Mis Elementos</span>
-            </a>
-        </li>
-    </ul>
-
-    <div class="menu-pie">
-        <a href="#" class="enlace-salir" onclick="toggleModal('modal-salir')">
-            <i class="bi bi-box-arrow-left"></i> Cerrar Sesión
-        </a>
-        <div class="perfil-usuario">
-            <i class="bi bi-person-circle"></i>
-            <span>APRENDIZ SENA</span>
+    <aside>
+        <div class="izquierda">
+            <div>
+                <img style="width: 160px; height: 160px;" src="/Img/Capa 1.svg" alt="StockMind">
+            </div>
         </div>
-    </div>
-    </nav>
+        <div class="nav">
+            <nav>
+                <ul>
+                    <li class="selected"><i class="bi bi-house-door"></i>Home</li>
+                    <a href="AprendizPerfil.html"><li><i class="bi bi-person-gear"></i>Perfil</li></a>
+                    <a href="NotificacionesAprendiz.html"><li><i class="bi bi-bell"></i>Notificaciones</li></a>
+                    <a href="ReportarDaños.html"><li><i class="bi bi-exclamation-triangle"></i>Reportar Daño</li></a>
+                    <a href="MisElementosAprendiz.html"><li><i class="bi bi-person-check-fill"></i>Mis elementos</li></a>
+                </ul>
+            </nav>
+        </div>
+    </aside>
+
 
     <main class="contenido-principal">
         <div class="perfil-contenedor">
@@ -68,12 +44,15 @@
                         <p>Juanestrada@soysena.edu.co</p>
                     </div>
                 </div>
-                <a href="EditarDatosAprendiz.html" class="boton-editar"><i class="bi bi-pencil"></i> Editar Datos</a>
+                <a href="EditarDatosAprendiz.html" class="boton-editar">
+                    <i class="bi bi-pencil">Editar Datos</i>
+                </a>
             </header>
 
             <div class="perfil-subtitulo">
                 <section class="perfil-cards">
                     <h3><i class="bi bi-person-lines-fill"></i>Información Personal</h3>
+
                     <div class="losDatos">
 
                         <div class="dato">
@@ -109,6 +88,10 @@
                             <div class="dato-falso"><i class="bi bi-telephone"></i> 310 123 4567</div>
                         </div>
                         <div class="dato-ancho">
+                            <label>Centro de Formacion</label>
+                            <div class="dato-falso"><i class="bi bi-bank"></i>Centro Comercio y Servicios</div>
+                        </div>
+                        <div class="dato-ancho">
                             <label>Programa de Formación</label>
                             <div class="dato-falso"><i class="bi bi-mortarboard"></i> Análisis y Desarrollo de Software</div>
                         </div>
@@ -119,80 +102,35 @@
                     </div>
                 </section>
 
-                <aside class="perfil-barraLateral">
+                <section class="perfil-barraLateral">
                     <div class="perfil-cards">
                         <h3><i class="bi bi-shield-lock"></i> Seguridad</h3>
                         <p class="seguridad-texto">Protege tu cuenta actualizando tu contraseña regularmente.</p>
-                        <button class="boton-seguridad" onclick="toggleModal('modal-clave')">Cambiar Contraseña></button>
+                        <br>
+                        <a href="#" class="boton-seguridad">Cambiar Contraseña>
+                        </a>
                     </div>
+
                     <div class="perfil-cards">
-                        <h3><i class="bi bi-gear"></i>Preferencias</h3>
+                        <h3><i class="bi bi-gear"></i> Preferencias</h3>
                         <div class="opcion-oscuro">
                             <span>Modo Oscuro</span>
-                            <i class="bi bi-toggle-off"></i>
+                            <label class="switch">
+                                <input type="checkbox" id="check-oscuro">
+                                <span class="slider"></span>
+                            </label>
                         </div>
                         <div class="opcion-oscuro">
                             <span>Notificaciones</span>
-                            <i class="bi bi-toggle-on"></i>
+                            <label class="switch">
+                                <input type="checkbox" id="check-notificaciones" checked> <span class="slider"></span>
+                            </label>
                         </div>
                     </div>
-                </aside>
+                </section>
             </div>
         </div>
     </main>
-
-
-
-
-    <div id="modal-salir" class="fondo-modal oculto">
-    <div class="tarjeta-modal">
-        <div class="icono-superior-modal">
-            <i class="bi bi-door-open"></i>
-        </div>
-        <h2>¿Cerrar sesión?</h2>
-        <p>¿Estás seguro de que deseas salir? Los cambios no guardados podrían perderse.</p>
-        <div class="pie-modal">
-            <button class="boton-modal boton-cancelar" onclick="toggleModal('modal-salir')">Cancelar</button>
-            <button class="boton-modal boton-confirmar" onclick="window.location.href='Inicio.html'">Cerrar Sesión</button>
-        </div>
-    </div>
-</div>
-
-<div id="modal-clave" class="fondo-modal oculto">
-    <div class="tarjeta-modal">
-        <div class="icono-superior-modal">
-            <i class="bi bi-shield-lock"></i>
-        </div>
-        <h2>Cambiar Contraseña</h2>
-        <p>Ingresa tu nueva clave para asegurar tu cuenta de aprendiz.</p>
-        
-        <div class="formulario-modal">
-            <div class="grupo-entrada-modal">
-                <i class="bi bi-lock"></i>
-                <input type="password" placeholder="Nueva contraseña">
-            </div>
-            <div class="grupo-entrada-modal">
-                <i class="bi bi-check2-circle"></i>
-                <input type="password" placeholder="Confirmar contraseña">
-            </div>
-        </div>
-
-        <div class="pie-modal">
-            <button class="boton-modal boton-cancelar" onclick="toggleModal('modal-clave')">Volver</button>
-            <button class="boton-modal boton-actualizar">Actualizar</button>
-        </div>
-    </div>
-</div>
-
-<script>
-    function toggleModal(idRecibido) {
-        // Buscamos el elemento por el ID que pasamos en el onclick
-        const ventana = document.getElementById(idRecibido);
-        // Le quitamos o ponemos la clase 'oculto'
-        ventana.classList.toggle('oculto');
-    }
-</script>
-
-
+    
 </body>
 </html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reportar Daños-StockMind</title>
+    <link rel="stylesheet" href="Estilos/Global.css">
+    <link rel="stylesheet" href="Estilos/ReportarDaños.css">
+</head>
+<body>
+    <aside>
+        <div class="izquierda">
+            <div>
+                <img style="width: 160px; height: 160px;" src="/Img/Capa 1.svg" alt="StockMind">
+            </div>
+        </div>
+        <div class="nav">
+            <nav>
+                <ul>
+                    <li class="selected"><i class="bi bi-house-door"></i>Home</li>
+                    <a href="AprendizPerfil.html"><li><i class="bi bi-person-gear"></i>Perfil</li></a>
+                    <a href="NotificacionesAprendiz.html"><li><i class="bi bi-bell"></i>Notificaciones</li></a>
+                    <a href="ReportarDaños.html"><li><i class="bi bi-exclamation-triangle"></i>Reportar Daño</li></a>
+                    <a href="MisElementosAprendiz.html"><li><i class="bi bi-person-check-fill"></i>Mis elementos</li></a>
+                </ul>
+            </nav>
+        </div>
+    </aside>
+
+    <main class="contenido-principal">
+    <div class="perfil-contenedor">
+        <h2 class="titulo-seccion"><i class="bi bi-exclamation-triangle"></i> Reportar Daño o Falla</h2>
+        
+        <section class="tarjeta-edicion">
+            <div class="encabezado-tarjeta">
+                <h3><i class="bi bi-megaphone"></i> Nuevo Reporte para: <strong>Dante</strong></h3>
+                <br>
+                <p>Describe el inconveniente detalladamente. Dante recibirá esta información para procesar la revisión técnica.</p>
+                <br>
+            </div>
+
+            <form class="formulario-edicion">
+                <div class="losDatos">
+                    
+                    <div class="dato-ancho">
+                        <label>Elemento afectado</label>
+                        <div class="input-contenedor">
+                            <i class="bi bi-box-seam"></i>
+                            <select name="elementoDañado" class="input-field select-custom">
+                                <option value="" disabled selected>Selecciona el elemento que presenta la falla...</option>
+                                <option value="1">Computador de Mesa - PC #10</option>
+                                <option value="2">Cargador - SENA-18</option>
+                                <option value="3">Mouse Óptico - SENA-23</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="dato">
+                        <label>Tipo de Falla</label>
+                        <div class="input-contenedor">
+                            <i class="bi bi-tools"></i>
+                            <select name="tipoFalla" class="input-field select-custom">
+                                <option value="fisico">Daño Físico (Rotura, golpe)</option>
+                                <option value="electrico">Falla Eléctrica (No prende, corto)</option>
+                                <option value="software">Software (Virus, error de sistema)</option>
+                                <option value="otro">Otro</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="dato">
+                        <label>Fecha del Suceso</label>
+                        <div class="input-contenedor">
+                            <i class="bi bi-calendar-event"></i>
+                            <input type="date" name="fechaDano" class="input-field">
+                        </div>
+                    </div>
+                    <div class="dato">
+                        <label>Hora Aproximada</label>
+                        <div class="input-contenedor">
+                            <i class="bi bi-clock"></i>
+                            <input type="time" name="horaDano" class="input-field">
+                        </div>
+                    </div>
+
+                    <div class="dato-ancho">
+                        <label>Descripción del problema</label>
+                        <div class="input-contenedor textarea-contenedor">
+                            <i class="bi bi-chat-left-text"></i>
+                            <textarea name="descripcion" placeholder="Ej: La pantalla del computador parpadea en color verde y se apaga después de 5 minutos de uso..." class="input-field"></textarea>
+                        </div>
+                    </div>
+                    <div class="dato-ancho">
+                        <label>Evidencia Fotográfica (Opcional)</label>
+                        <div class="area-carga-foto" id="drop-area">
+                            <input type="file" name="fotoDano" id="fotoDano" accept="image/*" hidden>
+                            <label for="fotoDano" class="contenido-carga">
+                                <i class="bi bi-cloud-arrow-up"></i>
+                                <div class="texto-carga">
+                                    <strong>Haz clic para subir</strong> o arrastra la foto aquí
+                                    <span>PNG, JPG (Máx. 5MB)</span>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="contenedor-botones">
+                    <button type="submit" class="boton-accion-primario btn-reporte-envio">
+                        <i class="bi bi-send-check"></i> Enviar Reporte a Dante
+                    </button>
+                    <a href="MisElementosAprendiz.html" class="boton-cancelar">Volver</a>
+                </div>
+            </form>
+        </section>
+    </div>
+</main>
+</body>
+</html>
