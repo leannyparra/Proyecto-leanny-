@@ -17,7 +17,7 @@
         <div class="nav">
             <nav>
                 <ul>
-                    <li class="selected"><i class="bi bi-house-door"></i>Home</li>
+                    <li class="selected"><i class="bi bi-house-door"></i>Inicio</li>
                     <a href="AprendizPerfil.html"><li><i class="bi bi-person-gear"></i>Perfil</li></a>
                     <a href="NotificacionesAprendiz.html"><li><i class="bi bi-bell"></i>Notificaciones</li></a>
                     <a href="ReportarDaños.html"><li><i class="bi bi-exclamation-triangle"></i>Reportar Daño</li></a>
@@ -29,33 +29,119 @@
 
     <main class="contenido-principal">
     <div class="perfil-contenedor">
-        <h2 class="titulo-seccion"><i class="bi bi-exclamation-triangle"></i> Reportar Daño o Falla</h2>
         
+        <div class="banner-notificaciones">
+            <div class="banner-contenido">
+                <div class="banner-texto">
+                    <h1>Centro de Reportes</h1>
+                    <p>Gestiona las fallas técnicas de tus elementos asignados.</p>
+                    <img src="Img/minilogo.png" alt="Logo StockMind" class="img-logoMini">
+                </div>
+            </div>
+        </div>
+
+        <div class="barra-busqueda-container">
+            <div class="input-busqueda-wrapper">
+                <i class="bi bi-search"></i>
+                <input type="text" placeholder="Buscar reportes (ej: Computador, Mouse...)" id="inputBusqueda">
+            </div>
+            <button class="boton-filtro">
+                <i class="bi bi-sliders"></i>
+                <span>Filtros</span>
+            </button>
+        </div>
+
+        <section class="historial-reportes-container">
+            <div class="encabezado-historial">
+                <h3><i class="bi bi-clock-history"></i> Mis Reportes Recientes</h3>
+                <span class="total-reportes">Mostrando los dos últimos reportes</span>
+            </div>
+            
+            <div class="lista-reportes">
+                
+                <div class="tarjeta-reporte-item"> 
+                    <div class="reporte-col-izq">
+                        <div class="header-reporte">
+                            <span class="tag-elemento">Cargador - SENA-18</span>
+                            <span class="tag-falla eléctrico">Falla Eléctrica</span>
+                        </div>
+                        <div class="cuerpo-reporte">
+                            <p class="desc-texto">
+                                <strong>Descripción:</strong> El adaptador de corriente se sobrecalienta excesivamente a los pocos minutos de conexión y emite un sonido agudo (pitido). No carga el equipo asignado.
+                            </p>
+                            
+                            <div class="meta-datos-reporte">
+                                <span><i class="bi bi-calendar3"></i> 20/04/2026</span>
+                                <span><i class="bi bi-clock"></i> 11:20 AM</span>
+                                <span><i class="bi bi-person-badge"></i> Técnico: Dante</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="reporte-col-der">
+                        <div class="estado-badge">En Revisión</div>
+                        <div class="contenedor-foto-reporte">
+                            <img src="Img/cargadorDñado.png" alt="Evidencia Cargador">
+                            <div class="zoom-icon"><i class="bi bi-zoom-in"></i></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tarjeta-reporte-item">
+                    <div class="reporte-col-izq">
+                        <div class="header-reporte">
+                            <span class="tag-elemento">PC #10</span>
+                            <span class="tag-falla físico">Daño Físico</span>
+                        </div>
+                        <div class="cuerpo-reporte">
+                            <p class="desc-texto">
+                                <strong>Descripción:</strong> La pantalla del computador parpadea en color verde y se apaga después de 5 minutos de uso...
+                            </p>
+                            <div class="meta-datos-reporte">
+                                <span><i class="bi bi-calendar3"></i> 22/04/2026</span>
+                                <span><i class="bi bi-clock"></i> 14:30 PM</span>
+                                <span><i class="bi bi-person-badge"></i> Técnico: Dante</span>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="reporte-col-der">
+                        <div class="estado-badge pendiente">Pendiente</div>
+                        <div class="contenedor-foto-reporte">
+                            <img src="Img/computadorDañado.png" alt="Evidencia Daño">
+                            <div class="zoom-icon"><i class="bi bi-zoom-in"></i></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <br>
         <section class="tarjeta-edicion">
             <div class="encabezado-tarjeta">
+                <h2 class="titulo-seccion"><i class="bi bi-exclamation-triangle"></i> Reportar Daño o Falla</h2>
                 <h3><i class="bi bi-megaphone"></i> Nuevo Reporte para: <strong>Dante</strong></h3>
                 <br>
                 <p>Describe el inconveniente detalladamente. Dante recibirá esta información para procesar la revisión técnica.</p>
                 <br>
             </div>
-
+            
             <form class="formulario-edicion">
                 <div class="losDatos">
                     
-                    <div class="dato-ancho">
-                        <label>Elemento afectado</label>
-                        <div class="input-contenedor">
-                            <i class="bi bi-box-seam"></i>
-                            <select name="elementoDañado" class="input-field select-custom">
-                                <option value="" disabled selected>Selecciona el elemento que presenta la falla...</option>
-                                <option value="1">Computador de Mesa - PC #10</option>
-                                <option value="2">Cargador - SENA-18</option>
-                                <option value="3">Mouse Óptico - SENA-23</option>
-                            </select>
-                        </div>
+                <div class="dato-ancho">
+                    <label>Elemento afectado</label>
+                    <div class="input-contenedor">
+                        <i class="bi bi-box-seam"></i>
+                        <select name="elementoDañado" class="input-field select-custom">
+                            <option value="" disabled selected>Selecciona el elemento que presenta la falla...</option>
+                            <option value="1">Computador de Mesa - PC #10</option>
+                            <option value="2">Cargador - SENA-18</option>
+                            <option value="3">Mouse Óptico - SENA-23</option>
+                        </select>
                     </div>
-
-                    <div class="dato">
+                </div>
+                
+                <div class="dato">
                         <label>Tipo de Falla</label>
                         <div class="input-contenedor">
                             <i class="bi bi-tools"></i>
