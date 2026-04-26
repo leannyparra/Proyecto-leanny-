@@ -17,10 +17,11 @@
         <div class="nav">
             <nav>
                 <ul>
-                    <li class="selected"><i class="bi bi-house-door"></i>Inicio</li>
+                    <a href="InicioDeAprendiz.html"><li><i class="bi bi-house-door"></i>Inicio</li></a>
                     <a href="AprendizPerfil.html"><li><i class="bi bi-person-gear"></i>Perfil</li></a>
                     <a href="NotificacionesAprendiz.html"><li><i class="bi bi-bell"></i>Notificaciones</li></a>
                     <a href="ReportarDaños.html"><li><i class="bi bi-exclamation-triangle"></i>Reportar Daño</li></a>
+                    <a href="MisReportesAprendiz.html"><li><i class="bi bi-file-check"></i>Mis Reportes</li></a>
                     <a href="MisElementosAprendiz.html"><li><i class="bi bi-person-check-fill"></i>Mis elementos</li></a>
                 </ul>
             </nav>
@@ -105,10 +106,17 @@
                 <section class="perfil-barraLateral">
                     <div class="perfil-cards">
                         <h3><i class="bi bi-shield-lock"></i> Seguridad</h3>
-                        <p class="seguridad-texto">Protege tu cuenta actualizando tu contraseña regularmente.</p>
-                        <br>
-                        <a href="#" class="boton-seguridad">Cambiar Contraseña>
-                        </a>
+
+                        <div class="botones-seguridad">
+                            <a href="#" class="btn-seguridad btn-password">
+                                <i class="bi bi-shield-lock"></i> Cambiar Contraseña
+                            </a>
+                            
+                            <a href="#" class="btn-seguridad btn-logout">
+                                <i class="bi bi-box-arrow-right"></i> Cerrar Sesión
+                            </a>
+                            <a href="#" class="btn-seguridad btn-delete"><i class="bi bi-trash3"></i> Eliminar Cuenta</a>
+                        </div>
                     </div>
 
                     <div class="perfil-cards">

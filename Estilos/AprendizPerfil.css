@@ -32,12 +32,14 @@ aside{
     padding: 10px;
     margin: 20px;
     border-radius: 8px;
+    transition: all 0.5s ease;
 }
 
 .nav li:hover {
     border-left: 5px solid rgb(1, 87, 24);
     background-color: rgb(236, 255, 233);
     cursor: pointer;
+    transform: translateY(-5px);
 }
 .nav a{
     text-decoration: none;
@@ -46,16 +48,16 @@ aside{
 .nav i{
     font-size: 18px;
     padding: 0 10px;
+    
 }
-.selected{
-    border-left: 5px solid rgb(1, 87, 24);
-    background-color: rgb(236, 255, 233);
-}
+
+
 
 /* --- Estilos del Contenedor Principal --- */
 .contenido-principal {
-    margin-left: 230px; /* Espacio para tu menú lateral */
-    padding: 40px;
+    margin-left:250px; /* Espacio para tu menú lateral */
+    padding: 50px;
+    width: calc(100% - 250px);
     background-color: #f8fafc; /* Gris muy claro de fondo */
     min-height: 100vh;
     font-family: var(--fuente);
@@ -139,10 +141,10 @@ aside{
 
 /* --- Botones --- */
 /* --- Estilos Base para ambos botones --- */
-.boton-editar, .boton-seguridad {
+.boton-editar {
     background-color: var(--verde-sena);
-    color: white !important; /* Forzamos blanco para evitar el azul de los links */
-    text-decoration: none !important; /* Quitamos el subrayado */
+    color: white ; /* Forzamos blanco para evitar el azul de los links */
+    text-decoration: none; /* Quitamos el subrayado */
     
     padding: 12px 20px;
     border-radius: 10px;
@@ -164,15 +166,8 @@ aside{
     margin-bottom: 20px;
 }
 
-/* --- Botón Seguridad (Ancho completo) --- */
-.boton-seguridad {
-    width: 100%;
-    justify-content: center;
-    box-sizing: border-box; /* Para que el padding no lo ensanche de más */
-}
-
 /* --- Efectos Hover (Cuando pasas el mouse) --- */
-.boton-editar:hover, .boton-seguridad:hover {
+.boton-editar:hover {
     background-color: #3d8e15; /* Un verde un poco más oscuro */
     transform: translateY(-2px); /* Pequeño salto hacia arriba */
     box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Sombra para dar profundidad */
@@ -183,6 +178,55 @@ aside{
 .bi {
     font-style: normal; /* Quita la cursiva por defecto del <i> */
 }
+
+
+
+
+/* Contenedor principal: los apila en columna */
+.botones-seguridad {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Espacio entre botones */
+    width: 100%;
+}
+
+/* Estilo base para los 3 botones */
+.btn-seguridad {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    border: 1px solid transparent;
+}
+
+/* Colores específicos (según tu imagen) */
+.btn-password {
+    background-color: #f0fdf4;
+    color: #16a34a;
+    border-color: #dcfce7;
+}
+
+.btn-logout {
+    background-color: #f8fafc;
+    color: #475569;
+    border-color: #e2e8f0;
+}
+
+.btn-delete {
+    background-color: #fff1f2;
+    color: #e11d48;
+    border-color: #ffe4e6;
+}
+
+/* Un hover básico para que se note el clic */
+.btn-seguridad:hover {
+    opacity: 0.8;
+}
+
 
 /* --- Cuerpo del Perfil (Grid) --- */
 .perfil-subtitulo {

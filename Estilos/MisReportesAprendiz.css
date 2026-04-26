@@ -1,0 +1,345 @@
+
+/* --- Navagacion --- */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    background-color: #f5f6f8; 
+    font-family: 'Poppins', sans-serif;
+}
+aside{
+    width: 250px;
+    height: 100vh; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: white;
+    text-align: left;
+}
+
+.izquierda{
+    display: flex;
+    justify-content: center;
+}
+.nav ul{
+    list-style: none;
+}
+.nav li {
+    width: 85%;
+    padding: 10px;
+    margin: 20px;
+    border-radius: 8px;
+    transition: all 0.5s ease;
+}
+
+.nav li:hover {
+    border-left: 5px solid rgb(1, 87, 24);
+    background-color: rgb(236, 255, 233);
+    cursor: pointer;
+    transform: translateY(-5px);
+}
+
+.nav a{
+    text-decoration: none;
+    color: black;
+}
+.nav i{
+    font-size: 18px;
+    padding: 0 10px;
+}
+
+/* para centrar la barra de navegacion y el historial, sin que choquen*/
+main {
+    margin-left: 250px; /* Evita que choque con el aside */
+    width: calc(100% - 250px); 
+    padding: 30px 50px; /* Espacio interno para que nada pegue a los bordes */
+    display: flex;
+    flex-direction: column;
+     /* Espacio uniforme entre la búsqueda y el historial */
+}
+
+/* reportes estadisticas */
+.quick-stats-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-bottom: 25px; /* Separa de la sección de reportes */
+}
+
+.stat-card {
+    background: white;
+    padding: 20px;
+    border-radius: 20px; /* Consistente con tus otras tarjetas */
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+    border: 1px solid #f1f5f9;
+}
+
+.stat-icon {
+    width: 45px;
+    height: 45px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+}
+
+/* Colores basados en el verde SENA y estados de reporte */
+.stat-icon.reports { background: #f0fdf4; color: #39A900; }
+.stat-icon.pending { background: #fffbeb; color: #d97706; }
+.stat-icon.items { background: #eff6ff; color: #2563eb; }
+
+.stat-label { font-size: 0.85rem; color: #64748b; display: block; }
+.stat-value { font-size: 1.4rem; font-weight: 700; color: #1e293b; }
+
+
+
+
+/* barra de busqueda */
+.barra-busqueda-container {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+.input-busqueda-wrapper {
+    position: relative;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+}
+
+.input-busqueda-wrapper i {
+    position: absolute;
+    left: 20px;
+    color: var(--texto-secundario);
+    font-size: 1.1rem;
+}
+
+.input-busqueda-wrapper input {
+    width: 100%;
+    padding: 15px 15px 15px 55px;
+    border-radius: 15px;
+    border: 2px solid #edf2f7;
+    font-family: var(--fuente);
+    font-size: 0.95rem;
+    background-color: var(--blanco);
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+.input-busqueda-wrapper input:focus {
+    border-color: var(--verde-sena);
+    box-shadow: 0 0 0 4px rgba(73, 169, 25, 0.1);
+    background-color: #fff;
+}
+
+.boton-filtro {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 0 25px;
+    background-color: var(--blanco);
+    border: 2px solid #edf2f7;
+    border-radius: 15px;
+    color: var(--texto-principal);
+    font-family: var(--fuente);
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.boton-filtro:hover {
+    background-color: #f8f9fa;
+    border-color: #cbd5e1;
+}
+
+.boton-filtro i {
+    font-size: 1.1rem;
+    color: var(--verde-sena);
+}
+
+
+/* historial */
+
+.historial-reportes-container {
+    background: transparent; /* Quitamos el fondo blanco exterior para que no se vea pesado */
+    border: none;
+    padding: 20px 0;
+    width: 100%;
+}
+
+/* La tarjeta que organiza todo */
+.tarjeta-contenedor-global {
+    background-color: #ffffff; /* Fondo blanco puro */
+    border-radius: 24px;       /* Bordes muy redondeados como tu perfil */
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04); /* Sombra muy suave */
+    border: 1px solid #edf2f7;
+}
+
+.encabezado-historial {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #f8fafc; /* Línea divisoria sutil */
+}
+
+.encabezado-historial h3 {
+    font-size: 1.4rem;
+    color: #1e293b;
+    font-weight: 700;
+}
+
+/* Tarjetas con más espacio interno */
+.tarjeta-reporte-item {
+    background-color: #f8fafc; /* Gris muy claro para diferenciar del fondo de la tarjeta global */
+    border: 1px solid #e2e8f0;
+    border-radius: 18px;
+    padding: 20px;
+    margin-bottom: 15px;
+    display: grid;
+    grid-template-columns: 1fr 200px;
+    gap: 20px;
+    transition: all 0.3s ease;
+}
+
+.tarjeta-reporte-item:hover {
+    background-color: #ffffff;
+    border-color: #39A900; /* Verde SENA al pasar el mouse */
+    transform: translateX(5px); /* Pequeño desplazamiento a la derecha */
+}
+
+/* Información de texto con mejor interlineado */
+.desc-texto {
+    color: #64748b;
+    font-size: 1rem;
+    line-height: 1.7; /* Mucho mejor para leer descripciones largas */
+    margin: 15px 0;
+}
+
+.meta-datos-reporte {
+    display: flex;
+    flex-wrap: wrap; /* Por si el espacio se reduce en tablets */
+    gap: 20px;
+    color: #94a3b8;
+    font-size: 0.9rem;
+}
+
+/* Foto y Estado */
+.reporte-col-der {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-left: 1px solid #f1f5f9;
+    padding-left: 25px;
+}
+
+.contenedor-foto-reporte {
+    width: 100%;
+    height: 130px; 
+    border-radius: 16px;
+    overflow: hidden;
+    position: relative; /* Importante para el zoom-icon */
+    background-color: #f1f5f9; /* Color de fondo por si la imagen no carga */
+}
+
+.contenedor-foto-reporte img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Esto hace que la foto llene el espacio sin deformarse */
+    object-position: center; /* Centra la imagen para que se vea lo más importante */
+    display: block;
+}
+
+/* Estilo base para todos los badges */
+.estado-badge {
+    padding: 6px 14px;
+    border-radius: 50px; /* Forma de pastilla perfecta */
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid transparent;
+    transition: all 0.3s ease;
+}
+
+/* Estado: Solucionado (Verde SENA suave) */
+.solucionado { 
+    background-color: #ecfdf5; 
+    color: #065f46;
+    border-color: #a7f3d0;
+}
+
+/* Estado: Pendiente (Naranja/Amarillo alerta) */
+.pendiente { 
+    background-color: #fffbeb; 
+    color: #92400e;
+    border-color: #fde68a;
+}
+
+/* Estado: En Revisión (Azul técnico) */
+.revision { 
+    background-color: #eff6ff; 
+    color: #1e40af;
+    border-color: #bfdbfe;
+}
+
+/* Efecto Hover opcional para que se sienta interactivo */
+.estado-badge:hover {
+    transform: scale(1.05);
+    filter: brightness(0.95);
+}
+
+/* Contenedor Principal del Historial de reportes*/
+.lista-reportes {
+    /* Ajustamos la altura para que quepan 4 tarjetas cómodamente */
+    max-height: 720px; 
+    overflow-y: auto;
+    padding-right: 15px;
+    
+    /* Evita que el contenedor colapse si hay pocos reportes */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Mejora: Asegúrate de que el margen inferior de la última tarjeta 
+   no sume espacio extra innecesario */
+.tarjeta-reporte-item:last-child {
+    margin-bottom: 0;
+}
+
+.lista-reportes::-webkit-scrollbar {
+    width: 10px; /* Ancho de la barra */
+
+}
+
+.lista-reportes::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Color del fondo de la barra */
+    border-radius: 10px;
+
+}
+
+.lista-reportes::-webkit-scrollbar-thumb {
+    background: #a0aec0; /* Color de la pieza que se mueve (gris SENA) */
+    border-radius: 10px;
+    border: 2px solid #f1f1f1; /* Crea un pequeño borde para que se vea estilizada */
+
+}
+
+.lista-reportes::-webkit-scrollbar-thumb:hover {
+    background: #718096; /* Color más oscuro al pasar el mouse */
+}
+

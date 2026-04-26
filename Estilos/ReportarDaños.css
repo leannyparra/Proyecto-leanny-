@@ -32,13 +32,16 @@ aside{
     padding: 10px;
     margin: 20px;
     border-radius: 8px;
+    transition: all 0.5s ease;
 }
 
 .nav li:hover {
     border-left: 5px solid rgb(1, 87, 24);
     background-color: rgb(236, 255, 233);
     cursor: pointer;
+    transform: translateY(-5px);
 }
+
 .nav a{
     text-decoration: none;
     color: black;
@@ -47,15 +50,12 @@ aside{
     font-size: 18px;
     padding: 0 10px;
 }
-.selected{
-    border-left: 5px solid rgb(1, 87, 24);
-    background-color: rgb(236, 255, 233);
-}
+
 
 
 
 /* ================================================================
-   DISEÑO PREMIUM DE REPORTES - STOCKMIND
+   DISEÑO DE REPORTES - STOCKMIND
    ================================================================ */
 
 .contenido-principal {
@@ -75,7 +75,7 @@ aside{
 
 /* barra de info */
 .banner-notificaciones {
-    background: linear-gradient(135deg, #7a7b7d 0%, #4a5568 100%); /* Azul oscuro SENA */
+    background: linear-gradient(135deg, #143475 0%, #6f989b 100%); /* Azul oscuro SENA */
     border-radius: 15px;
     padding: 30px;
     margin-bottom: 25px;
@@ -126,273 +126,77 @@ aside{
 }
 
 
-/* barra de busqueda */
-.barra-busqueda-container {
-    display: flex;
-    gap: 15px;
-    margin-bottom: 30px;
-    width: 100%;
-}
 
-.input-busqueda-wrapper {
-    position: relative;
-    flex-grow: 1;
-    display: flex;
-    align-items: center;
-}
-
-.input-busqueda-wrapper i {
-    position: absolute;
-    left: 20px;
-    color: var(--texto-secundario);
-    font-size: 1.1rem;
-}
-
-.input-busqueda-wrapper input {
-    width: 100%;
-    padding: 15px 15px 15px 55px;
-    border-radius: 15px;
-    border: 2px solid #edf2f7;
-    font-family: var(--fuente);
-    font-size: 0.95rem;
-    background-color: var(--blanco);
-    transition: all 0.3s ease;
-    outline: none;
-}
-
-.input-busqueda-wrapper input:focus {
-    border-color: var(--verde-sena);
-    box-shadow: 0 0 0 4px rgba(73, 169, 25, 0.1);
-    background-color: #fff;
-}
-
-.boton-filtro {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    padding: 0 25px;
-    background-color: var(--blanco);
-    border: 2px solid #edf2f7;
-    border-radius: 15px;
-    color: var(--texto-principal);
-    font-family: var(--fuente);
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.boton-filtro:hover {
-    background-color: #f8f9fa;
-    border-color: #cbd5e1;
-}
-
-.boton-filtro i {
-    font-size: 1.1rem;
-    color: var(--verde-sena);
-}
-
-/* Título con más carácter */
-.titulo-seccion {
-    font-size: 1.8rem;
-    color: #1e293b;
-    margin-bottom: 30px;
-    display: flex;
-    align-items: center;
-    gap: 15px;
-}
-
-.titulo-seccion i {
-    color: #f59e0b;
-    filter: drop-shadow(0 2px 4px rgba(245, 158, 11, 0.3));
-}
-
-/* --- La Tarjeta (Glassmorphism sutil) --- */
+/* Encabezado: Resaltando a Dante */
 .tarjeta-edicion {
     background: #ffffff;
-    border-radius: 30px;
-    padding: 50px;
-    border: 1px solid rgba(255, 255, 255, 0.8);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.04), 
-                0 1px 3px rgba(0, 0, 0, 0.02);
+    border-radius: 24px;
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    border: 1px solid #edf2f7;
+    max-width: 900px;
+    margin: 20px auto;
 }
-
-
-/* Contenedor Principal del Historial de reportes*/
-/* Este es el contenedor que ya tienes en el HTML */
-.lista-reportes {
-    max-height: 300px;    /* Altura máxima antes de que aparezca el scroll */
-    overflow-y: auto;     /* Activa el scroll vertical */
-    padding-right: 15px;  /* Espacio para que la barra no choque con las fotos */
-}
-
-.lista-reportes::-webkit-scrollbar {
-    width: 10px; /* Ancho de la barra */
-}
-
-.lista-reportes::-webkit-scrollbar-track {
-    background: #f1f1f1; /* Color del fondo de la barra */
-    border-radius: 10px;
-}
-
-.lista-reportes::-webkit-scrollbar-thumb {
-    background: #a0aec0; /* Color de la pieza que se mueve (gris SENA) */
-    border-radius: 10px;
-    border: 2px solid #f1f1f1; /* Crea un pequeño borde para que se vea estilizada */
-}
-
-.lista-reportes::-webkit-scrollbar-thumb:hover {
-    background: #718096; /* Color más oscuro al pasar el mouse */
-}
-
-.historial-reportes-container {
-    margin-top: 40px;
-    padding: 20px;
-    background-color: #ffffff;
-    border-radius: 15px;
-    border: 1px solid #e1e8ed;
-}
-
-.encabezado-historial {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 25px;
-    padding-bottom: 10px;
-    border-bottom: 2px solid #f4f7f9;
-}
-
-.encabezado-historial h3 {
-    color: #1a202c;
-    font-size: 1.2rem;
-}
-
-/* Tarjeta Individual */
-.tarjeta-reporte-item {
-    display: grid;
-    grid-template-columns: 1fr 180px;
-    gap: 20px;
-    padding: 20px;
-    background: #f8fafc;
-    border-radius: 12px;
-    margin-bottom: 15px;
-    border-left: 5px solid #2d3748; /* Color azul oscuro de tu menú */
-    transition: all 0.3s ease;
-}
-
-.tarjeta-reporte-item:hover {
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    transform: translateY(-2px);
-}
-
-/* Columna Izquierda: Información */
-.header-reporte {
-    display: flex;
-    gap: 10px;
-    margin-bottom: 12px;
-}
-
-.tag-elemento {
-    background: #2d3748;
-    color: white;
-    padding: 3px 12px;
-    border-radius: 6px;
-    font-weight: 600;
-    font-size: 0.8rem;
-}
-
-.tag-falla {
-    background: #edf2f7;
-    color: #4a5568;
-    padding: 3px 12px;
-    border-radius: 6px;
-    font-size: 0.8rem;
-}
-
-.desc-texto {
-    color: #4a5568;
-    font-size: 0.95rem;
-    line-height: 1.5;
-    margin-bottom: 15px;
-}
-
-.meta-datos-reporte {
-    display: flex;
-    gap: 15px;
-    font-size: 0.85rem;
-    color: #718096;
-}
-
-/* Columna Derecha: Estado y Foto */
-.reporte-col-der {
+/* Contenedor principal del encabezado */
+.encabezado-tarjeta {
     display: flex;
     flex-direction: column;
+    gap: 12px;
+    padding-bottom: 25px;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #bfc0c0; /* Línea divisoria sutil */
+}
+
+/* Estilo para el título principal (Reportar Daño) */
+.encabezado-tarjeta .titulo-seccion {
+    font-size: 1.75rem;
+    font-weight: 800;
+    color: #1e293b;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.encabezado-tarjeta .titulo-seccion i {
+    color: #ef4444; /* Rojo para indicar importancia/falla */
+}
+
+/* Estilo para el sub-badge (Nuevo Reporte para: Dante) */
+.encabezado-tarjeta h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #166534;
+    background-color: #f0fdf4; /* Fondo verde muy suave */
+    padding: 8px 16px;
+    border-radius: 12px;
+    display: inline-flex;
     align-items: center;
     gap: 10px;
-    border-left: 1px solid #e2e8f0;
-    padding-left: 15px;
+    width: fit-content; /* Para que no ocupe todo el ancho */
+    border: 1px solid #dcfce7;
+    margin: 5px 0;
 }
 
-.estado-badge {
-    width: 100%;
-    text-align: center;
-    padding: 5px;
-    border-radius: 20px;
-    font-size: 0.75rem;
-    font-weight: bold;
-    text-transform: uppercase;
+.encabezado-tarjeta h3 i {
+    color: #39A900; /* Verde SENA */
 }
 
-.pendiente { background: #fff3cd; color: #856404; }
-.solucionado { background: #c6f6d5; color: #22543d; }
-
-.contenedor-foto-reporte {
-    position: relative;
-    width: 100%;
-    height: 80px;
-    border-radius: 8px;
-    overflow: hidden;
-    cursor: pointer;
-}
-
-.contenedor-foto-reporte img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.zoom-icon {
-    position: absolute;
-    top: 0; left: 0; width: 100%; height: 100%;
-    background: rgba(0,0,0,0.2);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    opacity: 0;
-    transition: 0.3s;
-}
-
-.contenedor-foto-reporte:hover .zoom-icon {
-    opacity: 1;
-}
-/* Encabezado: Resaltando a Dante */
-.encabezado-tarjeta h3 {
-    font-size: 1.4rem;
-    color: #334155;
-}
-
-.encabezado-tarjeta strong {
-    color: #059669; /* Verde SENA */
-    background: #ecfdf5;
-    padding: 4px 12px;
-    border-radius: 10px;
+.encabezado-tarjeta h3 strong {
+    color: #39A900;
     font-weight: 800;
 }
 
+/* Estilo para el párrafo descriptivo */
 .encabezado-tarjeta p {
+    font-size: 0.95rem;
     color: #64748b;
     line-height: 1.6;
+    margin: 0;
+    max-width: 600px; /* Evita que el texto se estire demasiado */
 }
+
+
 
 /* --- Grid y Campos (Diferenciación Total) --- */
 .losDatos {

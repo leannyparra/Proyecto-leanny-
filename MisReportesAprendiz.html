@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis reportes-StockMind</title>
+        <link rel="stylesheet" href="Estilos/Global.css">
+        <link rel="stylesheet" href="Estilos/MisReportesAprendiz.css">
+
+</head>
+<body>
+    <aside>
+        <div class="izquierda">
+            <div>
+                <img style="width: 160px; height: 160px;" src="/Img/Capa 1.svg" alt="StockMind">
+            </div>
+        </div>
+        <div class="nav">
+            <nav>
+                <ul>
+                    <a href="InicioDeAprendiz.html"><li><i class="bi bi-house-door"></i>Inicio</li></a>
+                    <a href="AprendizPerfil.html"><li><i class="bi bi-person-gear"></i>Perfil</li></a>
+                    <a href="NotificacionesAprendiz.html"><li><i class="bi bi-bell"></i>Notificaciones</li></a>
+                    <a href="ReportarDaños.html"><li><i class="bi bi-exclamation-triangle"></i>Reportar Daño</li></a>
+                    <a href="MisReportesAprendiz.html"><li><i class="bi bi-file-check"></i>Mis Reportes</li></a>
+                    <a href="MisElementosAprendiz.html"><li><i class="bi bi-person-check-fill"></i>Mis elementos</li></a>
+                </ul>
+            </nav>
+        </div>
+    </aside>
+    
+    <main>
+
+        <div class="quick-stats-container">
+            <div class="stat-card">
+                <div class="stat-icon reports"><i class="bi bi-file-earmark-text"></i></div>
+                <div class="stat-info">
+                    <span class="stat-label">Reportes Totales</span>
+                    <span class="stat-value">12</span>
+                </div>
+            </div>
+            
+            <div class="stat-card">
+                <div class="stat-icon pending"><i class="bi bi-hourglass-split"></i></div>
+                <div class="stat-info">
+                    <span class="stat-label">En Revisión</span>
+                    <span class="stat-value">02</span>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon items"><i class="bi bi-pc-display"></i></div>
+                <div class="stat-info">
+                    <span class="stat-label">Equipos a Cargo</span>
+                    <span class="stat-value">05</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="barra-busqueda-container">
+            <div class="input-busqueda-wrapper">
+                <i class="bi bi-search"></i>
+                <input type="text" placeholder="Buscar reportes (ej: Computador, Mouse...)" id="inputBusqueda">
+            </div>
+            
+            <button class="boton-filtro">
+                <i class="bi bi-sliders"></i>
+                <span>Filtros</span>
+            </button>
+        
+        </div>
+        <section class="historial-reportes-container">
+            <div class="tarjeta-contenedor-global">
+            <div class="encabezado-historial">
+                <h3><i class="bi bi-clock-history"></i> Mis Reportes Recientes</h3>
+                <span class="total-reportes">Mostrando reportes</span>
+            </div>
+            
+            <div class="lista-reportes">
+                
+                <div class="tarjeta-reporte-item"> 
+                    <div class="reporte-col-izq">
+                        <div class="header-reporte">
+                            <span class="tag-elemento">Cargador - SENA-18</span>
+                            <span class="tag-falla eléctrico">Falla Eléctrica</span>
+                        </div>
+                        <div class="cuerpo-reporte">
+                            <p class="desc-texto">
+                                <strong>Descripción:</strong> El adaptador de corriente se sobrecalienta excesivamente a los pocos minutos de conexión y emite un sonido agudo (pitido). No carga el equipo asignado.
+                            </p>
+                            
+                            <div class="meta-datos-reporte">
+                                <span><i class="bi bi-calendar3"></i> 20/04/2026</span>
+                                <span><i class="bi bi-clock"></i> 11:20 AM</span>
+                                <span><i class="bi bi-person-badge"></i> Técnico: Dante</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="reporte-col-der">
+                        <div class="estado-badge revision">En Revisión</div>
+                        <div class="contenedor-foto-reporte">
+                            <img src="Img/cargadorDñado.png" alt="Evidencia Cargador">
+                            <div class="zoom-icon"><i class="bi bi-zoom-in"></i></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tarjeta-reporte-item">
+                    <div class="reporte-col-izq">
+                        <div class="header-reporte">
+                            <span class="tag-elemento">PC #10</span>
+                            <span class="tag-falla físico">Daño Físico</span>
+                        </div>
+                        <div class="cuerpo-reporte">
+                            <p class="desc-texto">
+                                <strong>Descripción:</strong> La pantalla del computador parpadea en color verde y se apaga después de 5 minutos de uso...
+                            </p>
+                            <div class="meta-datos-reporte">
+                                <span><i class="bi bi-calendar3"></i> 22/04/2026</span>
+                                <span><i class="bi bi-clock"></i> 14:30 PM</span>
+                                <span><i class="bi bi-person-badge"></i> Técnico: Dante</span>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="reporte-col-der">
+                        <div class="estado-badge pendiente">Pendiente</div>
+                        <div class="contenedor-foto-reporte">
+                            <img src="Img/computadorDañado.png" alt="Evidencia Daño">
+                            <div class="zoom-icon"><i class="bi bi-zoom-in"></i></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tarjeta-reporte-item"> 
+                    <div class="reporte-col-izq">
+                        <div class="header-reporte">
+                            <span class="tag-elemento">Mouse Logitech - M170</span>
+                            <span class="tag-falla">Falla de Periférico</span>
+                        </div>
+                        <div class="cuerpo-reporte">
+                            <p class="desc-texto">
+                                <strong>Descripción:</strong> El botón izquierdo presenta "doble clic" involuntario o clic fantasma, lo que dificulta la navegación y el uso de software de diseño.
+                            </p>
+                            <div class="meta-datos-reporte">
+                                <span><i class="bi bi-calendar3"></i> 18/04/2026</span>
+                                <span><i class="bi bi-clock"></i> 09:15 AM</span>
+                                <span><i class="bi bi-person-badge"></i> Técnico: Dante</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="reporte-col-der">
+                        <div class="estado-badge solucionado">Solucionado</div>
+                        <div class="contenedor-foto-reporte">
+                            <img src="Img/mouseDañado.png" alt="Evidencia Mouse">
+                            <div class="zoom-icon"><i class="bi bi-zoom-in"></i></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tarjeta-reporte-item"> 
+                    <div class="reporte-col-izq">
+                        <div class="header-reporte">
+                            <span class="tag-elemento">Teclado Dell - Lote B</span>
+                            <span class="tag-falla">Daño Físico</span>
+                        </div>
+                        <div class="cuerpo-reporte">
+                            <p class="desc-texto">
+                                <strong>Descripción:</strong> Faltan las teclas 'Enter' y 'Shift' derecho. Al parecer fueron desprendidas durante la última jornada de formación.
+                            </p>
+                            <div class="meta-datos-reporte">
+                                <span><i class="bi bi-calendar3"></i> 24/04/2026</span>
+                                <span><i class="bi bi-clock"></i> 15:45 PM</span>
+                                <span><i class="bi bi-person-badge"></i> Técnico: Dante</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="reporte-col-der">
+                        <div class="estado-badge pendiente">Pendiente</div>
+                        <div class="contenedor-foto-reporte">
+                            <img src="Img/tecladoDañado.png" alt="Evidencia Teclado">
+                            <div class="zoom-icon"><i class="bi bi-zoom-in"></i></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
