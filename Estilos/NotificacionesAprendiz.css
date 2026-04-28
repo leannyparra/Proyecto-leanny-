@@ -9,9 +9,10 @@
     min-height: 100vh;
 }
 
-.contenedor-notificaciones {
-    max-width: 1100px;
-    margin: 0 auto;
+.encabezado-seccion {
+    display: flex;
+    flex-direction: column; /* Esto apila los elementos verticalmente */
+    align-items: flex-start; /* Alinea todo a la izquierda */
 }
 
 .encabezado-seccion h1 {
@@ -24,6 +25,7 @@
     color: var(--texto-secundario);
     margin-bottom: 30px;
 }
+
 /* barra de busqueda */
 .barra-busqueda-container {
     display: flex;
