@@ -5,10 +5,11 @@
 .contenido-principal {
     margin-left: 250px; 
     width: calc(100% - 250px);
-    padding: 60px 40px;
+    padding: 20px 60px;
     display: flex;
-    justify-content: center;
-    background-color: #f4f7fa; /* Fondo ligeramente más azulado para dar calma */
+    flex-direction: column;
+
+    background-color: #f8f9fa; /* Fondo ligeramente más azulado para dar calma */
     min-height: 100vh;
 }
 
@@ -19,11 +20,11 @@
 
 /* barra de info */
 .banner-notificaciones {
-    background: linear-gradient(135deg, #4dac21 0%, #80e761 100%); /* Azul oscuro SENA */
+    background: linear-gradient(135deg, #61b83c 0%, #588b49 100%); /* Azul oscuro SENA */
     border-radius: 15px;
     padding: 30px;
     margin-bottom: 25px;
-    color: white;
+    color: rgb(255, 255, 255);
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
     position: relative; /* Esto mantiene al logo dentro del banner */
     overflow: hidden;

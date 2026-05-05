@@ -4,7 +4,7 @@
     margin-left: 250px; /* Ancho de tu aside */
     width: calc(100% - 250px);
     padding: 30px 50px;
-    background-color: #f8fafc;
+    background-color: #f8f9fa;
     min-height: 100vh;
 }
 

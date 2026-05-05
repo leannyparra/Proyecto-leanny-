@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="Estilos/Global.css">
     <link rel="stylesheet" href="Estilos/NotificacionesAprendiz.css">
     <link rel="stylesheet" href="Estilos/BarraNavegacion.css">
+    <link rel="stylesheet" href="Estilos/HeaderPerfil.css">
     
 </head>
 <body>
@@ -20,7 +21,6 @@
             <nav>
                 <ul>
                     <a href="InicioDeAprendiz.html"><li><i class="bi bi-house-door"></i>Inicio</li></a>
-                    <a href="AprendizPerfil.html"><li><i class="bi bi-person-gear"></i>Perfil</li></a>
                     <a href="NotificacionesAprendiz.html"><li class="selected"><i class="bi bi-bell"></i>Notificaciones</li></a>
                     <a href="ReportarDaños.html"><li><i class="bi bi-exclamation-triangle"></i>Reportar Daño</li></a>
                     <a href="MisReportesAprendiz.html"><li><i class="bi bi-file-check"></i>Mis Reportes</li></a>
@@ -30,12 +30,32 @@
         </div>
     </aside>
     
-<main class="contenido-principal">
+    <main class="contenido-principal">
+
+        <header class="barra-superior">
+                <div class="derecha">
+                    <div class="iconoPerfil">
+                        <i class="bi bi-bell"></i>
+                        <i class="bi bi-gear"></i>
+                    </div>
+                    <div class="perfil">
+                        <div class="info">
+                            <span class="nombre">Aprendiz SENA</span>
+                            <small>Andres Estrada</small>
+                    </div>
+                    <div class="avatarAprendiz" id="avatarAprendiz"></div>
+                    <div class="details-container">
+                        <a href="AprendizPerfil.html"><button><i class="bi bi-person-circle"></i>Perfil</button></a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
     <div class="contenedor-notificaciones">
-        <header class="encabezado-seccion">
+        <section class="encabezado-seccion">
             <h1>Centro de Notificaciones</h1>
             <p>Gestiona y revisa los elementos asignados a tu nombre en el ambiente de formación.</p>
-        </header>
+        </section>
 
         <div class="barra-busqueda-container">
             <div class="input-busqueda-wrapper">
@@ -81,5 +101,6 @@
         </section>
     </div>
 </main>
+<script src="Scripts.js"></script>
 </body>
 </html>

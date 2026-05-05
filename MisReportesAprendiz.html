@@ -7,6 +7,7 @@
         <link rel="stylesheet" href="Estilos/Global.css">
         <link rel="stylesheet" href="Estilos/MisReportesAprendiz.css">
         <link rel="stylesheet" href="Estilos/BarraNavegacion.css">
+        <link rel="stylesheet" href="Estilos/HeaderPerfil.css">
 
 </head>
 <body>
@@ -20,7 +21,6 @@
             <nav>
                 <ul>
                     <a href="InicioDeAprendiz.html"><li><i class="bi bi-house-door"></i>Inicio</li></a>
-                    <a href="AprendizPerfil.html"><li><i class="bi bi-person-gear"></i>Perfil</li></a>
                     <a href="NotificacionesAprendiz.html"><li><i class="bi bi-bell"></i>Notificaciones</li></a>
                     <a href="ReportarDaños.html"><li><i class="bi bi-exclamation-triangle"></i>Reportar Daño</li></a>
                     <a href="MisReportesAprendiz.html"><li class="selected"><i class="bi bi-file-check"></i>Mis Reportes</li></a>
@@ -31,6 +31,24 @@
     </aside>
     
     <main>
+        <header class="barra-superior">
+                <div class="derecha">
+                    <div class="iconoPerfil">
+                        <i class="bi bi-bell"></i>
+                        <i class="bi bi-gear"></i>
+                    </div>
+                    <div class="perfil">
+                        <div class="info">
+                            <span class="nombre">Aprendiz SENA</span>
+                            <small>Andres Estrada</small>
+                    </div>
+                    <div class="avatarAprendiz" id="avatarAprendiz"></div>
+                    <div class="details-container">
+                        <a href="AprendizPerfil.html"><button><i class="bi bi-person-circle"></i>Perfil</button></a>
+                    </div>
+                </div>
+            </div>
+        </header>
 
         <div class="quick-stats-container">
             <div class="stat-card">
@@ -188,5 +206,6 @@
             </div>
         </section>
     </main>
+    <script src="Scripts.js"></script>
 </body>
 </html>

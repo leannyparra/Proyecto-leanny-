@@ -22,14 +22,29 @@
     margin-top: 10px;
 }
 
-.titulo-seccion {
-    font-size: 1.8rem;
-    font-weight: 700;
-    color: var(--texto-principal);
-    margin-bottom: 25px;
+.titulo-con-vuelta {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 10px;
+}
+
+.btn-volver {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    color: #667;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 10px; /* Para que esté un poco encima del título */
+    transition: color 0.3s;
+}
+
+.btn-volver:hover {
+    color: #008000; /* El verde de tu logo */
+}
+.btn-volver i {
+    font-size: 1.2rem;
 }
 
 /* --- Tarjeta Blanca de Edición --- */

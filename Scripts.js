@@ -1,25 +1,40 @@
-/* ayuda */
-const modal = document.getElementById('modalAyuda');
-    const btnAbrir = document.getElementById('btnAyuda'); //idAyuda
-    const btnCerrarX = document.getElementById('closeAyuda');
+/* Selección de elementos */
+const avatarAprendiz = document.getElementById('avatarAprendiz');
+const detailsContainer = document.querySelector('.details-container');
 
-    // Función para abrir
-    btnAbrir.onclick = function(e) {
+const modal = document.getElementById('modalAyuda');
+const btnAbrir = document.getElementById('btnAyuda'); 
+const btnCerrarX = document.getElementById('closeAyuda');
+
+/* 1. FUNCIONALIDAD DEL MENÚ PERFIL (Toggle) */
+if (avatarAprendiz) {
+    avatarAprendiz.addEventListener('click', (e) => {
+        e.stopPropagation(); // Evita que el clic se cierre solo inmediatamente
+        detailsContainer.classList.toggle('is-visible');
+    });
+}
+
+/* 2. FUNCIONALIDAD DEL MODAL DE AYUDA */
+if (btnAbrir) {
+    btnAbrir.onclick = (e) => {
         e.preventDefault();
         modal.style.display = 'flex';
-    }
+    };
+}
 
-    // Función para cerrar
-    function cerrarModal() {
-        modal.style.display = 'none';
-    }
+const cerrarModal = () => { modal.style.display = 'none'; };
+if (btnCerrarX) btnCerrarX.onclick = cerrarModal;
 
-    // Cerrar si hacen clic en la X
-    btnCerrarX.onclick = cerrarModal;
-
-    // Cerrar si hacen clic fuera de la ventana blanca
-    window.onclick = function(event) {
-        if (event.target == modal) {
-            cerrarModal();
+/* 3. EVENTO GLOBAL DE CLIC (Cerrar todo al hacer clic fuera) */
+window.addEventListener('click', (event) => {
+    // Cerrar menú de perfil
+    if (detailsContainer && detailsContainer.classList.contains('is-visible')) {
+        if (!avatarAprendiz.contains(event.target)) {
+            detailsContainer.classList.remove('is-visible');
         }
     }
+    // Cerrar modal
+    if (event.target == modal) {
+        cerrarModal();
+    }
+});

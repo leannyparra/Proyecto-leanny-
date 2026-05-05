@@ -1,10 +1,7 @@
-
-
-
 /* Layout Principal */
 .contenido-principal {
     margin-left: 250px; /* Ajusta según el ancho de tu nav lateral */
-    padding: 50px;
+    padding: 15px 50px 50px 50px;
     background-color: #f8f9fa;
     min-height: 100vh;
 }

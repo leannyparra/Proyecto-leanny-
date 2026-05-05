@@ -1,0 +1,123 @@
+/* Ajuste del Header para que parezca una barra flotante */
+.barra-superior {
+    display: flex;
+    justify-content: flex-end; /* Mantiene la alineación a la derecha */
+    align-items: center;
+    background-color: transparent; /* Sin barra blanca, usa el fondo del main */
+    padding: 20px 30px 0 0; /* Añadimos 30px de espacio desde la derecha */
+    margin-bottom: 20px;
+    border: none; /* Quitamos bordes */
+    box-shadow: none; /* Quitamos sombras */
+}
+
+.derecha {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.iconoPerfil {
+    display: flex;
+    gap: 15px;
+    font-size: 1.3rem;
+    color: #444;
+}
+
+/* Estilo del Perfil */
+.perfil {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    position: relative;
+    cursor: pointer;
+}
+
+.nombre {
+    font-weight: 700;
+    font-size: 15px;
+    color: #000;
+    display: block;
+}
+
+.info small {
+    color: #28a745;
+    font-weight: 500;
+}
+
+.avatarAprendiz{
+    width: 40px;
+    height: 40px;
+    background-image: url('/Img/aprendiz-perfil.png');
+    background-size: cover;
+    border-radius: 50%;
+    background-color: #eee;
+}
+
+/* Menú desplegable (solo Perfil) */
+.details-container {
+    display: none;
+    position: absolute;
+    top: 55px;
+    right: 0;
+    z-index: 9999;
+    background-color: white;
+    min-width: 180px; /* Un poco más ancho para que respire */
+    border-radius: 12px; /* Bordes más suaves */
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12); /* Sombra más moderna */
+    padding: 8px; /* Espacio interno para que el botón no toque los bordes */
+    border: 1px solid #f0f0f0;
+}
+
+/* Esta clase es la que activa el JS */
+.details-container.is-visible,
+.details-container.active {
+    display: block;
+}
+
+.details-container a {
+    text-decoration: none;
+    display: block;
+    width: 100%;
+}
+.details-container button {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 15px;
+    
+    /* RESET DE BOTÓN: Esto quita el borde negro de la imagen */
+    background: none;
+    border: none;
+    outline: none;
+    
+    /* Tipografía */
+    color: #333;
+    font-size: 15px;
+    font-weight: 500;
+    font-family: inherit;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+}
+
+/* Efecto al pasar el mouse */
+.details-container button:hover {
+    background-color: #f1f8f1; /* Verde muy clarito */
+    color: #28a745; /* El verde que usas en el nombre de Andres Estrada */
+}
+
+/* Ajuste del icono dentro del botón */
+.details-container button i {
+    font-size: 1.2rem;
+    color: #666;
+    transition: color 0.2s;
+}
+
+.details-container button:hover i {
+    color: #28a745;
+}
+
+
+
+
