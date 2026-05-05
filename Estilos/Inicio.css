@@ -111,11 +111,6 @@
     text-align: justify;
 }
 
-.inicio-botones{
-    display: flex;
-    gap: 15px;
-}
-
 .btn-hero-primary, .btn-hero-secondary {
     padding: 15px 30px;
     border-radius: 8px;
