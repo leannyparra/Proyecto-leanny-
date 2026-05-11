@@ -18,6 +18,9 @@
     max-width: 900px;
 }
 
+
+
+
 /* barra de info */
 .banner-notificaciones {
     background: linear-gradient(135deg, #61b83c 0%, #588b49 100%); /* Azul oscuro SENA */
@@ -59,6 +62,10 @@
     top: 60%;     /* Lo baja a la mitad */
     transform: translateY(-50%); /* Lo centra verticalmente perfecto */
 }
+
+
+
+
 
 .banner-badge .estado-cuenta {
     background: rgba(72, 187, 120, 0.2); /* Verde traslúcido */

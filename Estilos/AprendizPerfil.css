@@ -27,6 +27,58 @@
     margin-bottom: 30px;
 }
 
+.grupo-acciones {
+    display: flex;       /* Los pone en fila */
+    align-items: center; /* Los centra verticalmente (alineación perfecta) */
+    gap: 15px;           /* Separación entre campana y botón */
+    text-align: right;
+    float: right;        /* Ahora el grupo entero es el que flota a la derecha */
+}
+
+/* Estilo base usando tu clase .der */
+.der {
+    font-size: 1.5rem;          /* Tamaño de la campana */
+    color: #444;                /* Gris oscuro profesional */
+    background-color: #f0f0f0;  /* Círculo de fondo suave */
+    padding: 10px;              /* Espacio interno para que el círculo se vea bien */
+    border-radius: 50%;         /* Hace que el fondo sea circular */
+    transition: all 0.3s ease;  /* Suaviza los cambios de color */
+    cursor: pointer;
+    display: inline-flex;       /* Alinea bien el icono dentro del círculo */
+    justify-content: center;
+    .der {
+    display: inline-flex;
+    align-items: center;
+    /* ... el resto de tu código de .der ... */
+}
+}
+
+/* Efecto al pasar el mouse */
+.der:hover {
+    background-color: #e2e2e2;  /* Fondo un poco más oscuro al tocarlo */
+    color: #39A900;             /* Cambia al verde institucional */
+    transform: rotate(15deg);   /* Un pequeño giro para que se vea dinámico */
+}
+
+/* El punto rojo de notificación (opcional) */
+.der::after {
+    content: '';
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 9px;
+    height: 9px;
+    background-color: #d9534f;  /* Rojo de alerta */
+    border-radius: 50%;
+    border: 2px solid white;    /* Contorno blanco para resaltar */
+}
+
+/* Ajuste para el enlace (quitamos el subrayado) */
+a:has(.der) {
+    text-decoration: none !important;
+    position: relative;
+}
+
 .perfil-info {
     display: flex;
     align-items: center;
@@ -101,15 +153,19 @@
     display: inline-flex; /* Para que el botón se ajuste al texto */
     align-items: center;
     gap: 8px;
+    vertical-align: middle;
     
     transition: all 0.3s ease;
     border: none;
     cursor: pointer;
+    float: none;           /* ELIMINA EL FLOAT para que no se suba ni se baje */
+    margin-bottom: 0;
 }
 
 /* --- Botón Editar (Específico) --- */
 .boton-editar {
-    float: right; /* Lo manda a la derecha como en tu imagen */
+
+    
     margin-bottom: 20px;
 }
 
